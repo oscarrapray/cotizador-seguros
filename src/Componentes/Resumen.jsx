@@ -1,17 +1,20 @@
 import React from 'react'
-const Resumen = ({marca,year,plan}) => {
+import { primerMayuscula } from '../helper';
+
+const Resumen = ({datos}) => {
+// extraer de datos
+const {marca, year, plan} = datos;
+
+if(marca === '' || year === '' || plan === '' ) return null;
 
     return(
         <div>
-            {
-                marca &&
-                <div>
-                    <h1>Resumen de la Cotizacion</h1>
-                    <h1>{`Marca: ${marca}`}</h1>
-                    <h1>{`Plan :${plan}`}</h1>
-                    <h1>{`año: ${year}`}</h1>
-                </ div>
-            }
+            <h2>Resumen de Cotización</h2>
+            <ul>
+                <li>Marca: { primerMayuscula(marca) } </li>
+                <li>Plan: {primerMayuscula(plan)} </li>
+                <li>Año del Auto: {year} </li>
+            </ul>
         </div>
     )
 }
