@@ -73,9 +73,9 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
         <form
         onSubmit={cotizarSeguro}
     >
-        { error ? <div>Todos los campos son obligatorios</div>  : null }
+        { error ? <div className = "error">Todos los campos son obligatorios</div>  : null }
 
-        <div>
+        <div className = "campo">
             <label>Marca</label>
             <select 
             name="marca"
@@ -89,7 +89,7 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
             </select>
         </div>
 
-        <div>
+        <div  className = "campo">
             <label>Año</label>
             <select 
               name="year"
@@ -110,16 +110,16 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
             </select>
         </div>
 
-        <div>
+        <div  className = "campo">
             <label>Plan</label>
-            <input 
+            <input className = "inputRadio"
               type="radio"
               name="plan"
               value="basico"
               checked={plan === "basico"}
               onChange={obtenerInformacion}
             /> Básico
-            <input 
+            <input className = "inputRadio"
                type="radio"
                name="plan"
                value="completo"

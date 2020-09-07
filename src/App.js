@@ -22,12 +22,12 @@ const [ cargando, guardarCargando] = useState(false);
 const { cotizacion, datos } = resumen;
 
   return(
-    <div>
+    <div className = "container">
         <Header 
           titulo='Cotizador de Seguros'
         />
 
-        <div>
+        <div className = "containerForm">
             <Formulario 
               guardarResumen={guardarResumen}
               guardarCargando={guardarCargando}

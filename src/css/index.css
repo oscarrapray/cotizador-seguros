@@ -1,6 +1,3 @@
-@import url("https://necolas.github.io/normalize.css/8.0.0/normalize.css");
-@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
-
 html {
   box-sizing: border-box;
 }
@@ -10,146 +7,95 @@ body {
   background: linear-gradient(to right, #904e95, #e96443); 
   font-family: Arial, Helvetica, sans-serif;
 }
-.contenedor {
-  max-width: 600px;
-  margin: 0 auto;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.boton {
-  background-color: #00838F!important;
-  font-size: 16px;
-  width: 100%;
-  padding: 15px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.boton:hover {
-  cursor: pointer;
-}
-header {
-  background-color:#26C6DA;
-  padding: 10px;
-  font-weight: bold;
-  color: white;
-}
-header h1 {
-  font-size: 2rem;
-  margin:0;
-  font-family: 'Slabo 27px', serif;
-  text-align: center;
-}
-.contenedor-formulario {
-  background-color: white;
-  padding: 3rem;
-}
-
-.campo {
-  display: flex;
-  margin-bottom: 1rem;
-  align-items: center;
-}
-.campo label {
-  flex: 0 0 200px;
-}
-.campo input[type="radio"] {
-  margin: 1rem;
-}
-
-.error {
-  background-color: #FBE9E7;
-  border: 1px solid #F4511E;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #F4511E;
-}
-.correcto {
-  background-color: rgb(211, 249, 187);
-  border: 1px solid rgb(50, 167, 0);
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: rgb(4, 150, 50);
-}
-.error p {
-  margin:0;
-}
-.contenido {
-  margin-top: 60px;
-  background-color: white;
-  -webkit-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-  box-shadow: 0px 21px 46px -15px rgba(0,0,0,1);
-}
-.resultado  {
-  margin-bottom: 40px;
-}
-.resultado div {
-  border: 1px solid #26C6DA;
-  text-align: center;
-  padding: 0  0 20px 0;
-}
-.resultado div p {
-  margin-bottom: 0;
-}
-.resultado div p.header {
-  background-color: #26C6DA;
-  margin-bottom: 10px;
-  color:white;
-  padding: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-
 span.resultado {
   position: relative;
   width: 100%;
 }
-
 .resultado-enter {
   transition: .5s;
-  transform: translateY(120%) ;
 }
-
 .resultado-enter.resultado-enter-active{
-  transform: translateY(120%);
+  transform: translateY(0%);
 }
 .resultado-exit{
   transform: translateY(0);
-  transition:.5s;
+  transition: .5s;
   position : absolute;
   left: 0;
   bottom : 0;
-  width: 100%;
+  right: 0;
 }
 .resultado-exit-active{
   opacity: 0;
-  transform: translateY(-100%);
+  transform: translateY(-10%);
 }
-    
-
-.gran-total {
-  text-align: center;
-  padding: .5rem;
-  border: 1px solid #26C6DA;
-  background-color: rgb(127, 224, 237);
-  margin-top: 1rem;
+/******************Header*****************/
+.header-container{
+    background-color: #26C6DA;
+    padding: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
 }
-.gran-total p {
-
+.header-title{
+    font-size: 2rem;
+    margin:0;
+    font-family: 'Slabo 27px', serif;
+    text-align: center;
 }
-
-.resumen {
-  padding: 1rem;
-  text-align: center;
+/****** Formulario *********/
+.campo{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+label{
+  flex: 0 0 100px;
+}
+select{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    -webkit-appearance: none;
+}
+.inputRadio{
+  margin: 0 1rem;
+}
+button{
   background-color: #00838F;
-  color: white;
-  margin-top: 1rem;
+    font-size: 16px;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    transition: background-color .3s ease;
+    margin-top: 2rem;
 }
-.resumen li {
-  list-style: none;
+button:hover{
+    background-color: #26C6DA;
+    cursor: pointer;
 }
-.resumen h2 {
-  margin:0 0 1rem 0;
+.error{
+  background-color: red;
+    color: white;
+    padding: 1rem;
+    width:100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/******* App ************************/
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.containerForm{
+  background-color: #FFF;
+  padding: 3rem;
 }
